@@ -13,6 +13,8 @@ func main() {
 	z01.PrintRune('\n')
 	y := "2373"
 	fmt.Println(atoi(y))
+	slice1()
+
 }
 
 func atoi(s string) int {
@@ -39,4 +41,31 @@ func atoi(s string) int {
 	result = result * sign
 	return result
 
+}
+
+func slice1() {
+	sliceNames := []string{
+		"mark",
+		"madison",
+		"mane",
+		"brook",
+	}
+	sliceNames = append(sliceNames, "molly")
+	fmt.Println(sliceNames)
+
+	for i, v := range sliceNames {
+		if i == 0 {
+			for _, j := range v {
+				z01.PrintRune(j)
+			}
+			z01.PrintRune('\n')
+		}
+		// for i, e := range v {
+		// 	if i == 0 {
+		// 		z01.PrintRune(e)
+		// 	}
+
+		// }
+
+	}
 }
