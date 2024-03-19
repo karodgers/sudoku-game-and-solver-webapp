@@ -2,20 +2,22 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/01-edu/z01"
 )
 
-func main() {
+// func main() {
 
-	x := 'z'
-	z01.PrintRune(x)
-	z01.PrintRune('\n')
-	y := "2373"
-	fmt.Println(atoi(y))
-	slice1()
+// 	x := 'z'
+// 	z01.PrintRune(x)
+// 	z01.PrintRune('\n')
+// 	y := "2373"
+// 	fmt.Println(atoi(y))
+// 	slice1()
+// 	zero()
 
-}
+// }
 
 func atoi(s string) int {
 
@@ -67,5 +69,47 @@ func slice1() {
 
 		// }
 
+	}
+	// vop:= []int{}
+	// slice2 := make([]int, 20)
+	// for i:=0; i<20;i++{
+	// 	return slice2[i]
+	// }
+	var table [5][6]string
+	for row := 0; row < 5; row++ {
+		for column := 0; column < 6; column++ {
+			table[row][column] =
+				strconv.Itoa(row) + "," +
+					strconv.Itoa(column)
+		}
+
+	}
+	fmt.Println(table)
+
+}
+
+func zero() {
+	// Creating a 2D array with 5 rows and 6 columns
+	rows, cols := 5, 6
+	array2D := make([][]int, rows)
+	for i := range array2D {
+		array2D[i] = make([]int, cols)
+	}
+
+	// Filling the array with some values (for demonstration)
+	counter := 1
+	for i := 0; i < rows; i++ {
+		for j := 0; j < cols; j++ {
+			array2D[i][j] = counter
+			counter++
+		}
+	}
+
+	// Printing the 2D array
+	for i := 0; i < rows; i++ {
+		for j := 0; j < cols; j++ {
+			fmt.Printf("%d ", array2D[i][j])
+		}
+		fmt.Println()
 	}
 }
